@@ -853,7 +853,7 @@ ul li {
   position: absolute;
   top: 37px;
   left: 249px;
-  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
 }
 .testimo {
   background-repeat: no-repeat;
@@ -1013,11 +1013,58 @@ ul li {
   padding-top: 80px;
   padding-bottom: 50px;
 }
+.brand__content {
+  width: 170px;
+  height: 100px;
+  padding: 20px 30px;
+}
+.brand__content::after {
+  content: "";
+  background-image: linear-gradient(
+    to right,
+    #f55f8d 0,
+    #f8ae56 51%,
+    #f55f8d 100%
+  );
+  position: absolute;
+  width: 170px;
+  height: 100px;
+  background-size: 200%;
+  z-index: -1;
+  transition: all 1s;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.brand__content:hover::after {
+  opacity: 1;
+}
+.brand__box {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  transition: all 1s;
+  border-radius: 0.5rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.logo-hover,
+.logo-main {
+  position: absolute;
+}
+.brand__content:hover .logo-main {
+  display: none;
+  position: absolute;
+}
+
 /* end brand */
 .fa-chevron-down:before {
   content: "\f078";
   color: black;
   font-size: 9px;
+}
 /* animation */
 @keyframes rotate {
   0% {

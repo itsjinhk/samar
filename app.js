@@ -26,8 +26,15 @@ var testimonialContent = new Swiper(".testimonial-comment", {
   },
 });
 
-$(".owl-carousel").owlCarousel({
+$("#owl-1").owlCarousel({
   loop: true,
   margin: 20,
-  nav: true,
+  nav: false,
+  items: 3,
+});
+$("#owl-2").owlCarousel({
+  loop: true,
+  margin: 20,
+  nav: false,
+  items: 6,
 });
